@@ -41,16 +41,4 @@ The .wts and .cfg files are moved to Jetson Nano and the model was run
 
 
 ## Inference
-![knife](https://user-images.githubusercontent.com/73357431/171991389-a84e3bb1-c9c6-4b3c-95ab-6e2e37979a30.png)
-![knife](https://user-images.githubusercontent.com/73357431/171991416-81214327-7814-4410-9880-7a0354096673.jpg)
-
-
-![pistol](https://user-images.githubusercontent.com/73357431/171991441-3b10c41d-b417-4f45-9cf4-176a932e6eef.jpg)
-
-https://user-images.githubusercontent.com/73357431/171992285-db29e537-9c70-45b4-a313-a6744d243056.mp4
-
-
-
-# Weapon-Detection
-# Weapon-Detection
-# Weapon-Detection
+Weapon detection demonstration with knife and pistol detection results on Jetson Nano using Deepstream.
