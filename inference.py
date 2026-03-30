@@ -26,7 +26,7 @@ def run_inference(video_path, model):
         end_time = time.time()
         # Display results
         results.render()
-        cv2.imshow('Inference', results.imgs[0])
+        cv2.imshow('Inference', results.ims[0])
         # Check for detections
         for pred in results.pred[0]:
             if pred[-1] == 0:  # Assuming class 0 is for weapons
