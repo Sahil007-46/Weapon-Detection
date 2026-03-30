@@ -1,44 +1,27 @@
-# WeaponDetectionYoloV5
-Weapon detection model using [YOLOv5](https://docs.ultralytics.com/) in pytorch
+# Weapon Detection
 
-[YOLOv5 github](https://github.com/ultralytics/yolov5)
-## Images Dataset 
-https://github.com/ari-dasci/OD-WeaponDetection
+## Installation
 
+To set up the YOLOv5 inference environment, follow these steps:
 
-## Data Preprocessing
-Has two classes: Knife and Pistol
+1. Clone the YOLOv5 repository:
+   ```bash
+   git clone https://github.com/ultralytics/yolov5
+   cd yolov5
+   ```
 
-Images were labelled and split into Test (75%), Validation (10%) and Training set (15%)
+2. Install required packages:
+   ```bash
+   pip install -U -r requirements.txt
+   ```
 
+3. Download the trained model weights:
+   You can download weights for various models from the [YOLOv5 releases](https://github.com/ultralytics/yolov5/releases). Place the weights in the yolov5 directory.
 
-## Training the Model
-Model trained using the YOLOv5 model on Google Colab
+## Usage
 
-YOLOv5 repository was cloned into the cloud machine and train.py was run with the following parameters:
-
-img 256, epochs 100, batch-size 32
-
-
-## Training stats
-|Class|Images|Labels|P|R|mAP@.5|mAP@.5:.95: 100%|
-| --- | --- | --- | --- | --- | --- | --- |           
-|all|697|799|0.92|0.839|0.91|0.618|
-|knife|697|320|0.917|0.884|0.936|0.589|
-|pistol|697|479|0.922|0.793|0.884|0.647|
-
-## Deepstream Installation
-Deepstream was installed on Jetson Nano
-
-[Detailed steps for installation](https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html)
-
-## Deepstream YOLO usage
-The trained .pt model was converted to .wts and .cfg file using the following: 
-
-https://github.com/marcoslucianops/DeepStream-Yolo#basic-usage
-
-The .wts and .cfg files are moved to Jetson Nano and the model was run
-
-
-## Inference
-Weapon detection demonstration with knife and pistol detection results on Jetson Nano using Deepstream.
+To run inference on an image using YOLOv5, use the following command:
+```bash
+python inference.py --weights yolov5s.pt --source path/to/your/image.jpg
+```
+Replace `yolov5s.pt` with the weight file you downloaded and `path/to/your/image.jpg` with your input image path.
